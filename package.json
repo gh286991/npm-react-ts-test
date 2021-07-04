@@ -5,19 +5,23 @@
     "example": "example",
     "lib": "lib"
   },
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": ["dist"],
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "build": "rollup -c",
+    "watch": "rollup -cw"
   },
   "devDependencies": {
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rollup": "^2.52.7",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
@@ -25,11 +29,11 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "loose-envify": "^1.4.0",
     "csstype": "^3.0.8",
-    "scheduler": "^0.20.2",
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
     "object-assign": "^4.1.1",
-    "js-tokens": "^4.0.0"
+    "scheduler": "^0.20.2"
   },
   "author": "",
   "license": "ISC",
