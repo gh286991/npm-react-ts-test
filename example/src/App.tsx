@@ -1,11 +1,11 @@
 import React from 'react';
-import SayHello from 'npm-react-ts-test';
+import AudioDefault from 'npm-react-ts-test';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <SayHello name="Tom" />
+      <AudioDefault value={1} />
     </div>
   );
 }

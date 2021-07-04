@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const onClick = (name: any) => {
-  window.alert(`hi~~ ${name}`);
+const AudioDefault = (props: any) => {
+  const { value } = props;
+  const [counter, setCounter] = useState(0);
+
+  const setCounterUp = () => setCounter(counter + value);
+
+  return (
+    <div style={{ padding: 20 }}>
+      {counter}
+      <button onClick={setCounterUp} style={{ marginLeft: 15 }}>
+        Like!! +{value}
+      </button>
+    </div>
+  );
 };
-const SayHello = ({ name }: { name: string }): JSX.Element => (
-  <>
-    <div>Hey {name}, say hello to TypeScript npm test !!!!.</div>
-    <button
-      onClick={() => {
-        onClick(name);
-      }}
-    >
-      click me
-    </button>
-  </>
-);
 
-export default SayHello;
+export default AudioDefault;

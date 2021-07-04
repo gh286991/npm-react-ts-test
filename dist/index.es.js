@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-var onClick = function (name) {
-    window.alert("hi~~ " + name);
-};
-var SayHello = function (_a) {
-    var name = _a.name;
-    return (React.createElement(React.Fragment, null,
-        React.createElement("div", null,
-            "Hey ",
-            name,
-            ", say hello to TypeScript npm test !!!!."),
-        React.createElement("button", { onClick: function () {
-                onClick(name);
-            } }, "click me")));
+var AudioDefault = function (props) {
+    var value = props.value;
+    var _a = useState(0), counter = _a[0], setCounter = _a[1];
+    var setCounterUp = function () { return setCounter(counter + value); };
+    return (React.createElement("div", { style: { padding: 20 } },
+        counter,
+        React.createElement("button", { onClick: setCounterUp, style: { marginLeft: 15 } },
+            "Like!! +",
+            value)));
 };
 
-export default SayHello;
+export default AudioDefault;

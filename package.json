@@ -7,11 +7,13 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "types": "dist/index.d.ts",
   "scripts": {
     "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build": "rollup -c",
     "watch": "rollup -cw"
   },
@@ -25,14 +27,18 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "dependencies": {
+    "@types/ramda": "^0.27.42",
     "csstype": "^3.0.8",
     "js-tokens": "^4.0.0",
     "loose-envify": "^1.4.0",
+    "moment": "^2.29.1",
     "object-assign": "^4.1.1",
+    "ramda": "^0.27.1",
+    "rollup-plugin-commonjs": "^10.1.0",
     "scheduler": "^0.20.2"
   },
   "author": "",
