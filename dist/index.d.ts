@@ -1,3 +1,3 @@
 /// <reference types="react" />
-declare const AudioDefault: (props: any) => JSX.Element;
+declare const AudioDefault: () => JSX.Element;
 export default AudioDefault;
