@@ -6,7 +6,6 @@ import pkg from './package.json'
 import postcss from 'rollup-plugin-postcss-modules'
 import autoprefixer from 'autoprefixer'
 
-
 export default {
     input: 'src/index.tsx',
     output: [
@@ -23,10 +22,12 @@ export default {
       ...Object.keys(pkg.dependencies || {}),
       ...Object.keys(pkg.peerDependencies || {}),
     ],plugins: [
+      postcss({
+        plugins: [autoprefixer()],
+      }),
         typescript({
           typescript: require('typescript'),
         }),
-        postcss(),
         commonjs({
           include: 'node_modules/**',
           namedExports: {

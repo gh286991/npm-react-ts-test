@@ -28,3 +28,18 @@
   position: relative;
   background-color: red;
 }
+.hiContainer {
+  border: 2px yellow solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.hiWord {
+  background-color: black;
+  color: white;
+  width: 20%;
+  height: fit-content;
+  padding: 10px;
+}

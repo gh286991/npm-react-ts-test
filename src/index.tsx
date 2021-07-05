@@ -4,7 +4,7 @@ import styles from './index.module.css';
 import moment from 'moment';
 import * as R from 'ramda';
 
-const AudioDefault = () => {
+export const AudioDefault = () => {
   const [duringTime, setDuringTime] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isPause, setIsPause] = useState<boolean>(false);
@@ -133,4 +133,12 @@ const AudioDefault = () => {
   );
 };
 
-export default AudioDefault;
+// export default AudioDefault;
+
+export const Hello: React.FC = () => {
+  return (
+    <div className={styles.hiContainer}>
+      <div className={styles.hiWord}>HI here</div>
+    </div>
+  );
+};

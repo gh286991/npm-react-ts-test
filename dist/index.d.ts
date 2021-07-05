@@ -1,3 +1,3 @@
-/// <reference types="react" />
-declare const AudioDefault: () => JSX.Element;
-export default AudioDefault;
+import React from 'react';
+export declare const AudioDefault: () => JSX.Element;
+export declare const Hello: React.FC;

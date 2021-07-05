@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var React = require('react');
 var moment = require('moment');
 var R = require('ramda');
@@ -57,8 +59,8 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".index-module_container__p6aGD {\n  text-align: center;\n  width: fit-content;\n  height: 500px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  border: 2px blue solid;\n}\n.index-module_exampleContainer__1UPpM {\n  border: 2px red solid;\n}\n\n.index-module_testContainer__2r4wU {\n  width: fit-content;\n}\n\n.index-module_volume_slider_icon__l7o5d {\n  height: 10px;\n  width: 100%;\n  position: relative;\n  background-color: #ddd;\n}\n.index-module_volume_slider__2ULpg {\n  height: 100%;\n  width: 100%;\n  position: relative;\n  background-color: red;\n}\n";
-var styles = {"container":"index-module_container__p6aGD","exampleContainer":"index-module_exampleContainer__1UPpM","testContainer":"index-module_testContainer__2r4wU","volume_slider_icon":"index-module_volume_slider_icon__l7o5d","volume_slider":"index-module_volume_slider__2ULpg","volumeSliderIcon":"index-module_volume_slider_icon__l7o5d","volumeSlider":"index-module_volume_slider__2ULpg"};
+var css_248z = ".index-module_container__p6aGD {\n  text-align: center;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: 500px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  border: 2px blue solid;\n}\n.index-module_exampleContainer__1UPpM {\n  border: 2px red solid;\n}\n\n.index-module_testContainer__2r4wU {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n}\n\n.index-module_volume_slider_icon__l7o5d {\n  height: 10px;\n  width: 100%;\n  position: relative;\n  background-color: #ddd;\n}\n.index-module_volume_slider__2ULpg {\n  height: 100%;\n  width: 100%;\n  position: relative;\n  background-color: red;\n}\n.index-module_hiContainer__1Du0B {\n  border: 2px yellow solid;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  height: 200px;\n}\n.index-module_hiWord__3Ts9h {\n  background-color: black;\n  color: white;\n  width: 20%;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  padding: 10px;\n}\n";
+var styles = {"container":"index-module_container__p6aGD","exampleContainer":"index-module_exampleContainer__1UPpM","testContainer":"index-module_testContainer__2r4wU","volume_slider_icon":"index-module_volume_slider_icon__l7o5d","volume_slider":"index-module_volume_slider__2ULpg","hiContainer":"index-module_hiContainer__1Du0B","hiWord":"index-module_hiWord__3Ts9h","volumeSliderIcon":"index-module_volume_slider_icon__l7o5d","volumeSlider":"index-module_volume_slider__2ULpg"};
 styleInject(css_248z);
 
 var AudioDefault = function () {
@@ -148,5 +150,11 @@ var AudioDefault = function () {
             React__default['default'].createElement("br", null),
             React__default['default'].createElement("audio", { src: "http://www.sousound.com/music/healing/healing_01.mp3", controls: true }))));
 };
+// export default AudioDefault;
+var Hello = function () {
+    return (React__default['default'].createElement("div", { className: styles.hiContainer },
+        React__default['default'].createElement("div", { className: styles.hiWord }, "HI here")));
+};
 
-module.exports = AudioDefault;
+exports.AudioDefault = AudioDefault;
+exports.Hello = Hello;
